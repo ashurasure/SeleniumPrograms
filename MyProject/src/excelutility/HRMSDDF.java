@@ -42,6 +42,8 @@ public class HRMSDDF{
 	    Reporter.log("logged");
 	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	    Assert.assertTrue(driver.getTitle().matches("OrangeHRM"),"invalid credentials");
+	    int c=driver.findElements(By.tagName("iframe")).size();
+		System.out.println(c);
 }
 	@DataProvider(name="getdata")
 	public Object[][] getdata(){
